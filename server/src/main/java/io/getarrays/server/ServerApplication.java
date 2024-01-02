@@ -24,6 +24,8 @@ public class ServerApplication {
 		SpringApplication.run(ServerApplication.class, args);
 	}
 	
+	/*
+	
 	@Bean
 	CommandLineRunner run(ServerRepository serverRepository) {
 		
@@ -36,6 +38,8 @@ public class ServerApplication {
 			serverRepository.save(new Server(null, "192.168.1.31", "Red Hat Enterprise Linux", "64 GB", "Mail server", "http://localhost:8080/server/image/server4.png",Status.SERVER_UP));
 		};
 	}
+	
+	*/
 	
 		@Bean
     	public CorsFilter corsFilter() {

@@ -18,16 +18,19 @@ import io.getarrays.server.repository.ServerRepository;
 import io.getarrays.server.service.ServerService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
+
 @Transactional
 @Slf4j
 public class ServerServiceImpl implements ServerService {
+	
 
-	@Autowired private final ServerRepository serverRepository;
+	private final ServerRepository serverRepository;
 	
 	@Override
 	public Server create(Server server) {	
@@ -95,5 +98,7 @@ public class ServerServiceImpl implements ServerService {
 		}
 		
 	}
+
+
 
 }
