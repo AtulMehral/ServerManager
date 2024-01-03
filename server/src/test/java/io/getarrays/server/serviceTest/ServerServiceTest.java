@@ -38,7 +38,6 @@ public class ServerServiceTest {
 		System.out.println("Testing Get single servers");
 		Server server = serverService.getServer(1L);
 		assertThat(server).isNotNull();
-//		assertThat(listServers.size()).isNotEqualTo(0);
-//		assertThat(listServers.size()).isEqualTo(4);
+
 	}
 }
