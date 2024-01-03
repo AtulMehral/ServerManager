@@ -22,7 +22,7 @@ import lombok.AllArgsConstructor;
 @ContextConfiguration(classes = ServerApplication.class)
 public class ServerServiceTest {
 
-	private ServerService serverService;
+	private ServerServiceImpl serverService;
 		
 	
 	@Test
@@ -31,5 +31,14 @@ public class ServerServiceTest {
 		Collection<Server> listServers = serverService.listServers(20);
 		assertThat(listServers.size()).isNotEqualTo(0);
 		assertThat(listServers.size()).isEqualTo(4);
+	}
+	
+	@Test
+	public void testGetSingleServers() {
+		System.out.println("Testing Get single servers");
+		Server server = serverService.getServer(1L);
+		assertThat(server).isNotNull();
+//		assertThat(listServers.size()).isNotEqualTo(0);
+//		assertThat(listServers.size()).isEqualTo(4);
 	}
 }
