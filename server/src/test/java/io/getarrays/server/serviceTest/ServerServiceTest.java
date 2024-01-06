@@ -37,7 +37,7 @@ public class ServerServiceTest {
 	public void testGetSingleServers() {
 		System.out.println("Testing Get single servers");
 		Server server = serverService.getServer(1L);
-		assertThat(server).isNotNull();
+		assertThat(server).isNotEmpty();
 
 	}
 }
